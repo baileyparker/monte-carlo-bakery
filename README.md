@@ -32,7 +32,7 @@ The model is defined by the use of random sampling to perform a calculation that
 
 This algorithm hinges on key equations from geometry and probabilty. Namely, consider circle with radius $r$ centered at the origin. We know from primary school geometry that the area of this circle is $\pi r^2$. Next, circumscribe the circle with a square of side length $2r$. It's area is $4r^2$.
 
-At this point, if we were to randomly choose a point in the square, what would be the chances that this point would also be inside the square. Basic probability tells us that this is simply the ratio of the area of the circle to the area of the rectangle. So,
+At this point, if we were to randomly choose a point in the square, what would be the chances that this point would also be inside the square? Basic probability tells us that this is simply the ratio of the area of the circle to the area of the rectangle. So,
 
 $$Pr \left [ \text{point in circle} \right ] = \frac{\pi r^2}{4r^2} = \frac{\pi}{4}$$
 
