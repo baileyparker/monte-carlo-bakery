@@ -1,13 +1,8 @@
 Monte Carlo Bakery
 ==================
 
-<div class="figure">
-
 ![Monte Carlo
-Casino](https://farm1.staticflickr.com/186/395414839_b36ada3b84_n.jpg)
-Monte Carlo Casino
-
-</div>
+Casino](https://farm1.staticflickr.com/186/395414839_b36ada3b84_n.jpg) 
 
 Serving yummy, fresh digits of π daily!
 
@@ -81,12 +76,7 @@ pure math alone (like calculating many digits of Pi).
 Warning: Math Ahead
 -------------------
 
-<div class="figure">
-
-![Animation of a Monte Carlo estimation of Pi](images/simulation.gif)
-Animation of a Monte Carlo estimation of Pi
-
-</div>
+![Animation of a Monte Carlo estimation of Pi](images/simulation.gif) 
 
 This algorithm hinges on key equations from geometry and probabilty.
 Namely, consider circle with radius
@@ -104,10 +94,14 @@ would be the chances that this point would also be inside the square?
 Basic probability tells us that this is simply the ratio of the area of
 the circle to the area of the rectangle. So,
 
-\
-![Pr \\left [ \\text{point in circle} \\right ] = \\frac{\\pi
+<p align="center">
+
+Pr \\left [ \\text{point in circle} \\right ] = \\frac{\\pi
 r\^2}{4r\^2} =
-\\frac{\\pi}{4}](http://chart.apis.google.com/chart?cht=tx&chl=Pr%20%5Cleft%20%5B%20%5Ctext%7Bpoint%20in%20circle%7D%20%5Cright%20%5D%20%3D%20%5Cfrac%7B%5Cpi%20r%5E2%7D%7B4r%5E2%7D%20%3D%20%5Cfrac%7B%5Cpi%7D%7B4%7D "Pr \left [ \text{point in circle} \right ] = \frac{\pi r^2}{4r^2} = \frac{\pi}{4}")\
+\\frac{\\pi}{4}](http://chart.apis.google.com/chart?cht=tx&chl=Pr%20%5Cleft%20%5B%20%5Ctext%7Bpoint%20in%20circle%7D%20%5Cright%20%5D%20%3D%20%5Cfrac%7B%5Cpi%20r%5E2%7D%7B4r%5E2%7D%20%3D%20%5Cfrac%7B%5Cpi%7D%7B4%7D "Pr \left [ \text{point in circle} \right ] = \frac{\pi r^2}{4r^2} = \frac{\pi}{4}")
+
+</p>
+
 
 We will exploit this relationship to find the value of Pi. In applying
 the Monte Carlo model, we choose points uniformly distributed between
@@ -120,13 +114,22 @@ r\^2](http://chart.apis.google.com/chart?cht=tx&chl=%5Csqrt%7B%5Cleft%20%28%20x_
 we can determine which of these points lie within the circle and
 therefore the ratio of points in the circle to total points. Since,
 
-\
-![Pr \\left [ \\text{point in circle} \\right ] = \\frac{\\text{points
+<p align="center">
+
+Pr \\left [ \\text{point in circle} \\right ] = \\frac{\\text{points
 in circle}}{\\text{\# of
-points}}](http://chart.apis.google.com/chart?cht=tx&chl=Pr%20%5Cleft%20%5B%20%5Ctext%7Bpoint%20in%20circle%7D%20%5Cright%20%5D%20%3D%20%5Cfrac%7B%5Ctext%7Bpoints%20in%20circle%7D%7D%7B%5Ctext%7B%23%20of%20points%7D%7D "Pr \left [ \text{point in circle} \right ] = \frac{\text{points in circle}}{\text{# of points}}")\
-\
-![\\pi \\approx 4 \\times \\frac{\\text{points in circle}}{\\text{\# of
-points}}](http://chart.apis.google.com/chart?cht=tx&chl=%5Cpi%20%5Capprox%204%20%5Ctimes%20%5Cfrac%7B%5Ctext%7Bpoints%20in%20circle%7D%7D%7B%5Ctext%7B%23%20of%20points%7D%7D "\pi \approx 4 \times \frac{\text{points in circle}}{\text{# of points}}")\
+points}}](http://chart.apis.google.com/chart?cht=tx&chl=Pr%20%5Cleft%20%5B%20%5Ctext%7Bpoint%20in%20circle%7D%20%5Cright%20%5D%20%3D%20%5Cfrac%7B%5Ctext%7Bpoints%20in%20circle%7D%7D%7B%5Ctext%7B%23%20of%20points%7D%7D "Pr \left [ \text{point in circle} \right ] = \frac{\text{points in circle}}{\text{# of points}}")
+
+</p>
+
+
+<p align="center">
+
+\\pi \\approx 4 \\times \\frac{\\text{points in circle}}{\\text{\# of
+points}}](http://chart.apis.google.com/chart?cht=tx&chl=%5Cpi%20%5Capprox%204%20%5Ctimes%20%5Cfrac%7B%5Ctext%7Bpoints%20in%20circle%7D%7D%7B%5Ctext%7B%23%20of%20points%7D%7D "\pi \approx 4 \times \frac{\text{points in circle}}{\text{# of points}}")
+
+</p>
+
 
 This is the basic algoithm that the script applies to calculate Pi. We
 can optimize it slightly by choosing ![r =

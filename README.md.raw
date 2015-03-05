@@ -1,6 +1,6 @@
 Monte Carlo Bakery
 ==================
-![Monte Carlo Casino](https://farm1.staticflickr.com/186/395414839_b36ada3b84_n.jpg)
+![Monte Carlo Casino](https://farm1.staticflickr.com/186/395414839_b36ada3b84_n.jpg)\ 
 
 Serving yummy, fresh digits of π daily!
 
@@ -28,7 +28,7 @@ The Monte Carlo model was a term coined by Nicholas Metropolis, a colleague of J
 The model is defined by the use of random sampling to perform a calculation that would otherwise be difficult or even impossible with pure math alone (like calculating many digits of Pi).
 
 ## Warning: Math Ahead
-![Animation of a Monte Carlo estimation of Pi](images/simulation.gif)
+![Animation of a Monte Carlo estimation of Pi](images/simulation.gif)\ 
 
 This algorithm hinges on key equations from geometry and probabilty. Namely, consider circle with radius $r$ centered at the origin. We know from primary school geometry that the area of this circle is $\pi r^2$. Next, circumscribe the circle with a square of side length $2r$. It's area is $4r^2$.
 
@@ -39,6 +39,7 @@ $$Pr \left [ \text{point in circle} \right ] = \frac{\pi r^2}{4r^2} = \frac{\pi}
 We will exploit this relationship to find the value of Pi. In applying the Monte Carlo model, we choose points uniformly distributed between $(-r,-r)$ and $(r,r)$. Then, by using the Euclidean distance formula $\sqrt{\left ( x_1-x_2 \right )^2 + \left ( y_1-y_2 \right )^2} < r^2$, we can determine which of these points lie within the circle and therefore the ratio of points in the circle to total points. Since,
 
 $$Pr \left [ \text{point in circle} \right ] = \frac{\text{points in circle}}{\text{# of points}}$$
+
 $$\pi \approx 4 \times \frac{\text{points in circle}}{\text{# of points}}$$
 
 This is the basic algoithm that the script applies to calculate Pi. We can optimize it slightly by choosing $r = 1$ since this will eliminate the need to calculate the square root for each point.
