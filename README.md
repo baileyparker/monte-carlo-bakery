@@ -174,3 +174,11 @@ an introduction to implementing Monte Carlo methods.
 ### Build Instructions
 
 Run `./build.sh`.
+
+### Further Reading
+
+-   [π, Phase Space, and Bouncing Billiard
+    Balls](http://aperiodical.com/2015/03/%CF%80-phase-space-and-bouncing-billiard-balls/) -
+    A fascinating alternative method of calculating Pi using the physics
+    behind bouncing billiard balls
+
